@@ -1,5 +1,5 @@
 Gem::Specification.new do |s|
-  s.name		= 'Connector'
+  s.name		= 'connector'
   s.version		= '0.0.0'
   s.date		= '2020-04-12'
   s.summary		= "Send SMS's easily"
