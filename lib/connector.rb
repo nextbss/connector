@@ -15,10 +15,15 @@ module Connector
     if options == nil
 	raise "options can not be nil"
     end
+    
+    if options["api_key"] == nil || options["api_key"] == ""
+	raise "api key can not be nil or empty"
+    end
 
     body = { "phone_number" => phone_number, "content" => message }.to_json
     headers = { "Content-Type" => "application/json", "X-API-KEY" => options["api_key"] }
     resp = Faraday.post(@base_uri, body, headers) 
+    
     if resp.status == 200
 	time = Time.now
         puts "Message Sent at #{time} via EC"
