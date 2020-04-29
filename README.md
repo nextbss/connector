@@ -22,7 +22,7 @@ require 'connector'
   Connector.send_sms("Hey, I am a developer", "+244994567098", options)
 ```
 
-### Get all SMS's returns an array of hashes 
+### Get all SMS's and returns an array of hashes 
 ```ruby
   options = {"api_key" => "YOUR_API_KEY"}
   Connector.get_all_sms(options)
